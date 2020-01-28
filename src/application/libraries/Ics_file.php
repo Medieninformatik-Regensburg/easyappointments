@@ -49,7 +49,7 @@ class Ics_file {
         $event
             ->setStart($appointment_start)
             ->setEnd($appointment_end)
-            ->setSummary($service['name'])
+	    ->setSummary($customer['first_name'] . ' ' . $customer['last_name']  . '(' . $service['name'] . ')')
             ->setUid($appointment['id']);
 
         // Add the customer attendee.
