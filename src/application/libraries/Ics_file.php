@@ -50,7 +50,7 @@ class Ics_file {
             ->setStart($appointment_start)
             ->setEnd($appointment_end)
 	    ->setSummary($customer['first_name'] . ' ' . $customer['last_name']  . '(' . $service['name'] . ')')
-            ->setUid($appointment['id']);
+            ->setUid('easyappointments@' . gethostname() . '-' . $appointment['id']);
 
         // Add the customer attendee.
         $attendee = new Attendee(new Formatter());
